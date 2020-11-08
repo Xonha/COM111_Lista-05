@@ -7,6 +7,7 @@ typedef struct elemento Elemento;
 typedef Elemento *Pilha;
 
 // funções para alocar e desalocar memória
+int criar_dado(int *dado);
 Pilha *criar_pilha();
 int liberar_pilha(Pilha *pi);
 
@@ -23,5 +24,6 @@ int consultar_topo_pilha(Pilha *pi);
 int imprimir_pilha(Pilha *pi);
 void preencher_pilha(Pilha *pi);
 void movimentar(Pilha *pi, Pilha *pi2);
+void imprimir_tubos(Pilha *pi, Pilha *pi2, Pilha *pi3);
 
 #endif

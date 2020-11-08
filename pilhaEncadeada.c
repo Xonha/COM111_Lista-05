@@ -118,7 +118,7 @@ int empilhar(Pilha *pi, int dado)
   }
   else if ((*pi)->dado > no->dado)
   {
-    printf("\nOrdem não alfabetica");
+    printf("Ordem não alfabetica\n\n");
     return 0;
   }
   else
@@ -133,15 +133,11 @@ int empilhar(Pilha *pi, int dado)
 int desempilhar(Pilha *pi)
 {
   if (pi == NULL)
-  {
     return 0;
-  }
 
   // pilha vazia, não remove nada
   if ((*pi) == NULL)
-  {
     return 0;
-  }
 
   // muda inicio para o proximo elemento
   Elemento *atual;
@@ -191,4 +187,16 @@ void movimentar(Pilha *pi, Pilha *pi2)
   ok = empilhar(pi2, res);
   if (ok == 1)
     ok = desempilhar(pi);
+}
+
+void imprimir_tubos(Pilha *pi, Pilha *pi2, Pilha *pi3)
+{
+  int ok;
+  printf("Tubo 0: ");
+  ok = imprimir_pilha(pi);
+  printf("\nTubo 1: ");
+  ok = imprimir_pilha(pi2);
+  printf("\nTubo 2: ");
+  ok = imprimir_pilha(pi3);
+  printf("\n\n");
 }
