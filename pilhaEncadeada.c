@@ -33,7 +33,7 @@ Pilha *criar_pilha()
 
 void preencher_pilha(Pilha *pi)
 {
-  int vogais[5] = {1, 2, 3, 4, 5};
+  int vogais[5] = {5, 4, 3, 2, 1};
 
   for (int i = 0; i < 5; i++)
   {
@@ -116,7 +116,7 @@ int empilhar(Pilha *pi, int dado)
   {
     *pi = no;
   }
-  else if ((*pi)->dado > no->dado)
+  else if ((*pi)->dado < no->dado)
   {
     printf("Ordem não alfabetica\n\n");
     return 0;
@@ -163,23 +163,6 @@ int consultar_topo_pilha(Pilha *pi)
   return dado;
 }
 
-int imprimir_pilha(Pilha *pi)
-{
-  if (pi == NULL || (*pi) == NULL)
-    return 0;
-
-  Elemento *aux = (*pi);
-
-  while (aux->prox != NULL)
-  {
-    printf("%d ", aux->dado);
-    aux = aux->prox;
-  }
-  printf("%d", aux->dado);
-
-  return 1;
-}
-
 void movimentar(Pilha *pi, Pilha *pi2)
 {
   int ok, res;
@@ -199,4 +182,21 @@ void imprimir_tubos(Pilha *pi, Pilha *pi2, Pilha *pi3)
   printf("\nTubo 2: ");
   ok = imprimir_pilha(pi3);
   printf("\n\n");
+}
+
+int imprimir_pilha(Pilha *pi)
+{
+  if (pi == NULL || (*pi) == NULL)
+    return 0;
+
+  Elemento *aux = (*pi);
+
+  while (aux->prox != NULL)
+  {
+    printf("%d ", aux->dado);
+    aux = aux->prox;
+  }
+  printf("%d", aux->dado);
+
+  return 1;
 }
