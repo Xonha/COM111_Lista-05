@@ -167,7 +167,7 @@ int movimentar(Pilha *pi, Pilha *pi2)
 {
   int ok, res;
   res = consultar_topo_pilha(pi);
-  if (res == NULL)
+  if (res != 1 && res != 2 && res != 3 && res != 4 && res != 5)
   {
     printf("Nada nesse tubo!\n\n");
     return 0;
