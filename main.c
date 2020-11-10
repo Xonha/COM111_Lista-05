@@ -5,7 +5,7 @@
 
 // bibliotecas do projeto
 #include "pilhaEncadeada.h"
-//  #include "pilhaEncadeada.c"
+//#include "pilhaEncadeada.c"
 
 // funcao principal
 int main(void)
@@ -34,7 +34,10 @@ int main(void)
     printf("\n");
 
     if (tuboSaida < 1 || tuboSaida > 3 || tuboEntrada < 1 || tuboEntrada > 3)
+    {
       printf("\nIndices dos tubos inválidos\n\n");
+      cont--;
+    }
     else
     {
       ok = movimentar(pi[tuboSaida - 1], pi[tuboEntrada - 1]);

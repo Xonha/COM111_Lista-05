@@ -176,6 +176,8 @@ int movimentar(Pilha *pi, Pilha *pi2)
   ok = empilhar(pi2, res);
   if (ok == 1)
     ok = desempilhar(pi);
+  else
+    return 0;
 
   return 1;
 }
