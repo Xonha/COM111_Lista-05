@@ -193,7 +193,6 @@ int imprimir_pilha(Pilha *pi)
 
   while (aux->prox != NULL)
   {
-    // printf("%d ", aux->dado);
     printa_letras(aux->dado);
     aux = aux->prox;
   }

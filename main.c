@@ -1,11 +1,9 @@
-
 // bibliotecas do sistema
 #include <stdio.h>
 #include <stdlib.h>
 
 // bibliotecas do projeto
 #include "pilhaEncadeada.h"
-#include "pilhaEncadeada.c"
 
 // funcao principal
 int main(void)
