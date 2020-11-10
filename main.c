@@ -5,7 +5,7 @@
 
 // bibliotecas do projeto
 #include "pilhaEncadeada.h"
-//#include "pilhaEncadeada.c"
+//  #include "pilhaEncadeada.c"
 
 // funcao principal
 int main(void)
@@ -27,17 +27,17 @@ int main(void)
 
   do
   {
-    printf("Entre a pilha de saida (0 - 2): ");
+    printf("Entre a pilha de saida (1 - 3): ");
     scanf("%d", &tuboSaida);
-    printf("Entre a pilha de saida (0 - 2): ");
+    printf("Entre a pilha de saida (1 - 3): ");
     scanf("%d", &tuboEntrada);
     printf("\n");
 
-    if (tuboSaida < 0 || tuboSaida > 2 || tuboEntrada < 0 || tuboEntrada > 2)
+    if (tuboSaida < 1 || tuboSaida > 3 || tuboEntrada < 1 || tuboEntrada > 3)
       printf("\nIndices dos tubos inválidos\n\n");
     else
     {
-      ok = movimentar(pi[tuboSaida], pi[tuboEntrada]);
+      ok = movimentar(pi[tuboSaida - 1], pi[tuboEntrada - 1]);
       if (ok == 0)
       {
         cont--;
