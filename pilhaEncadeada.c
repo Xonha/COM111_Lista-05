@@ -174,13 +174,12 @@ void movimentar(Pilha *pi, Pilha *pi2)
 
 void imprimir_tubos(Pilha *pi, Pilha *pi2, Pilha *pi3)
 {
-  int ok;
   printf("Tubo 0: ");
-  ok = imprimir_pilha(pi);
+  imprimir_pilha(pi);
   printf("\nTubo 1: ");
-  ok = imprimir_pilha(pi2);
+  imprimir_pilha(pi2);
   printf("\nTubo 2: ");
-  ok = imprimir_pilha(pi3);
+  imprimir_pilha(pi3);
   printf("\n\n");
 }
 

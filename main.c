@@ -1,9 +1,11 @@
+
 // bibliotecas do sistema
 #include <stdio.h>
 #include <stdlib.h>
 
 // bibliotecas do projeto
 #include "pilhaEncadeada.h"
+#include "pilhaEncadeada.c"
 
 // funcao principal
 int main(void)
@@ -12,8 +14,7 @@ int main(void)
   // no início a pilha está vazia, logo, o ponteiro inicio tem valor NULL
   //o ponteiro inicio conterá o endereço do primeiro elemento da pilha
   Pilha *pi[3];
-  int opcao, ok, cont = 0;
-  int dado, tuboSaida, tuboEntrada;
+  int tuboSaida, tuboEntrada, cont = 0;
 
   pi[0] = criar_pilha();
   pi[1] = criar_pilha();
@@ -41,7 +42,7 @@ int main(void)
 
     if ((*pi[0]) == NULL && (*pi[1]) == NULL)
     {
-      printf("!! Parabéns você ganhou !!\n\n");
+      printf("Parabéns você ganhou !!\n\n");
       return 0;
     }
 
