@@ -43,7 +43,7 @@ int main(void)
 
     if ((*pi[0]) == NULL && (*pi[1]) == NULL)
     {
-      printf("Vc ganhou!\n\n");
+      printf("!! Parabéns você ganhou !!\n\n");
       return 0;
     }
 

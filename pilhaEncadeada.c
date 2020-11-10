@@ -193,10 +193,33 @@ int imprimir_pilha(Pilha *pi)
 
   while (aux->prox != NULL)
   {
-    printf("%d ", aux->dado);
+    // printf("%d ", aux->dado);
+    printa_letras(aux->dado);
     aux = aux->prox;
   }
-  printf("%d", aux->dado);
+  printa_letras(aux->dado);
 
   return 1;
+}
+
+void printa_letras(int dado)
+{
+  switch (dado)
+  {
+  case 1:
+    printf("A");
+    break;
+  case 2:
+    printf("B");
+    break;
+  case 3:
+    printf("C");
+    break;
+  case 4:
+    printf("D");
+    break;
+  case 5:
+    printf("E");
+    break;
+  }
 }
