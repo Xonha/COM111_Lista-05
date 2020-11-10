@@ -5,7 +5,7 @@
 
 // bibliotecas do projeto
 #include "pilhaEncadeada.h"
-#include "pilhaEncadeada.c"
+//#include "pilhaEncadeada.c"
 
 // funcao principal
 int main(void)
@@ -14,7 +14,7 @@ int main(void)
   // no início a pilha está vazia, logo, o ponteiro inicio tem valor NULL
   //o ponteiro inicio conterá o endereço do primeiro elemento da pilha
   Pilha *pi[3];
-  int tuboSaida, tuboEntrada, cont = 0;
+  int ok, tuboSaida, tuboEntrada, cont = 0;
 
   pi[0] = criar_pilha();
   pi[1] = criar_pilha();
@@ -36,7 +36,13 @@ int main(void)
     if (tuboSaida < 0 || tuboSaida > 2 || tuboEntrada < 0 || tuboEntrada > 2)
       printf("\nIndices dos tubos inválidos\n\n");
     else
-      movimentar(pi[tuboSaida], pi[tuboEntrada]);
+    {
+      ok = movimentar(pi[tuboSaida], pi[tuboEntrada]);
+      if (ok == 0)
+      {
+        cont--;
+      }
+    }
 
     imprimir_tubos(pi[0], pi[1], pi[2]);
 

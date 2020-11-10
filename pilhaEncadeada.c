@@ -163,13 +163,21 @@ int consultar_topo_pilha(Pilha *pi)
   return dado;
 }
 
-void movimentar(Pilha *pi, Pilha *pi2)
+int movimentar(Pilha *pi, Pilha *pi2)
 {
   int ok, res;
   res = consultar_topo_pilha(pi);
+  if (res == NULL)
+  {
+    printf("Nada nesse tubo!\n\n");
+    return 0;
+  }
+
   ok = empilhar(pi2, res);
   if (ok == 1)
     ok = desempilhar(pi);
+
+  return 1;
 }
 
 void imprimir_tubos(Pilha *pi, Pilha *pi2, Pilha *pi3)
