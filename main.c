@@ -29,7 +29,7 @@ int main(void)
   {
     printf("Entre a pilha de saida (1 - 3): ");
     scanf("%d", &tuboSaida);
-    printf("Entre a pilha de saida (1 - 3): ");
+    printf("Entre a pilha de entrada (1 - 3): ");
     scanf("%d", &tuboEntrada);
     printf("\n");
 
